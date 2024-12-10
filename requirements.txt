@@ -1,0 +1,16 @@
+Flask>=2.2.0
+Werkzeug>=2.2.0
+tensorflow==2.18.0
+keras==3.7.0
+numpy==1.26.0
+h5py==3.11.0
+absl-py
+ml-dtypes
+namex
+optree
+packaging
+rich
+Pillow
+scikit-learn==1.0.2
+matplotlib==3.5.1
+pandas==1.3.5
