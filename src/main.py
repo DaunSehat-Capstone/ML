@@ -4,8 +4,14 @@ import csv
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.applications.resnet50 import preprocess_input
+import os
+from flask import Flask, jsonify, request
+import tempfile
 
-model = load_model('assets/model/model.h5')
+app = Flask(__name__)
+
+model_path = os.path.join(os.path.dirname(__file__), '..', 'assets', 'model', 'model.h5')
+model = load_model(model_path)
 # model.summary()
 
 def preprocess_image(image_path, target_size=(120, 120)):
@@ -22,12 +28,13 @@ def predict_image(image_path, class_names):
     confidence = np.max(predictions)
     return class_names[predicted_class[0]], confidence
 
+csv_file_path = os.path.join(os.path.dirname(__file__), '..', 'assets', 'data', 'plant.csv')
 def print_result(predicted_class, confidence):
     result = {}
     if confidence < 0.9:
         result['plant'] = 'Tanaman tidak diketahui'
     else:
-        with open('assets/data/plant.csv', mode ='r')as file:
+        with open(csv_file_path, mode ='r')as file:
             csvFile = csv.reader(file)
             for lines in csvFile:
                 if predicted_class in lines:
@@ -79,11 +86,37 @@ class_names = [
     "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
 ]
 
-# img_path = "assets/img/padi.jpeg"
-img_path = "assets/img/corn_common_rust.jpg"
-# img_path = "assets/img/strawberry_lead_scorch.jpg"
-predicted_class, confidence = predict_image(img_path, class_names)
-result = print_result(predicted_class, confidence)
-print(result)
+# # img_path = "assets/img/padi.jpeg"
+# img_path = "assets/img/corn_common_rust.jpg"
+# # img_path = "assets/img/strawberry_lead_scorch.jpg"
+# predicted_class, confidence = predict_image(img_path, class_names)
+# result = print_result(predicted_class, confidence)
+# print(result)
 
 
+@app.route('/predict', methods=['POST'])
+def predict():
+    try:
+        if request.method == 'POST':
+            file = request.files['file']
+            print(file)
+
+            with tempfile.NamedTemporaryFile(delete=False) as temp_file:
+                img_path = temp_file.name
+                file.save(img_path)
+
+            predicted_class, confidence = predict_image(img_path, class_names)
+            result = print_result(predicted_class, confidence)
+            os.remove(img_path)
+            if confidence < 0.9:
+                return jsonify({'message': "Tidak ditemukan hasil"}), 200
+            else:
+                result["confidence"] = str(confidence * 100)
+                return jsonify(result)
+    except Exception as e:
+        print(f"Error: {e}")
+        return jsonify({'error': str(e)}), 500
+    
+    
+if __name__ == '__main__':
+       app.run(host='0.0.0.0', port=8080)
