@@ -1,0 +1,39 @@
+﻿Label,Plant,Condition,Cure
+Apple___Apple_scab,Apel,Apple Scab,Gunakan fungisida seperti kaptan atau miklobutanil dan bersihkan daun yang terinfeksi.
+Apple___Black_rot,Apel,Black Rot,"Pangkas dan musnahkan cabang yang terinfeksi, serta aplikasikan fungisida saat buah mulai berkembang."
+Apple___Cedar_apple_rust,Apel,Cedar Apple Rust,Singkirkan pohon juniper di sekitar dan gunakan fungisida khusus karat seperti miklobutanil.
+Apple___healthy,Apel,Tidak Terdeteksi Penyakit,"Rawat secara teratur dengan penyiraman, pemupukan, dan pemantauan hama yang baik."
+Blueberry___healthy,Blueberry,Tidak Terdeteksi Penyakit,"Pastikan pH tanah asam (4,5-5,5) dan beri jarak antar tanaman untuk sirkulasi udara."
+Cherry___healthy,Cherry,Tidak Terdeteksi Penyakit,Pangkas secara teratur dan lindungi dari embun beku untuk pertumbuhan sehat.
+Cherry___Powdery_mildew,Cherry,Powdery Mildew,Gunakan semprotan sulfur atau bikarbonat kalium dan tingkatkan sirkulasi udara dengan memangkas.
+Corn___Cercospora_leaf_spot Gray_leaf_spot,Jagung,Cercospora Leaf Spot,Rotasi tanaman dan aplikasikan fungisida foliar pada tahap awal penyakit.
+Corn___Common_rust,Jagung,Common Rust,Gunakan varietas tahan dan aplikasikan fungisida seperti tebukonazol jika diperlukan.
+Corn___healthy,Jagung,Tidak Terdeteksi Penyakit,Ikuti jadwal tanam yang tepat dan gunakan pemupukan seimbang.
+Corn___Northern_Leaf_Blight,Jagung,Northern Leaf Blight,Pilih varietas tahan dan aplikasikan fungisida saat kondisi mendukung penyakit.
+Grape___Black_rot,Anggur,Black Rot,Hapus buah mumi dan tunas yang terinfeksi serta aplikasikan fungisida di awal musim tanam.
+Grape___Esca_(Black_Measles),Anggur,Esca (Black Measles),Pangkas kayu yang terinfeksi dan hindari cedera mekanis saat perawatan.
+Grape___healthy ,Anggur,Tidak Terdeteksi Penyakit,Latih tanaman merambat dengan baik dan hindari genangan air.
+Grape___Leaf_blight_(Isariopsis_Leaf_Spot),Anggur,Leaf Blight (Isariopsis Leaf Spot),Gunakan fungisida pelindung dan pastikan ventilasi yang baik di kebun anggur.
+Orange___Haunglongbing_(Citrus_greening) ,Jeruk,Haunglongbing (Citrus Greening),Singkirkan pohon yang terinfeksi dan kendalikan vektor kutu daun jeruk Asia.
+Peach___Bacterial_spot,Persik,Bacterial Spot,Gunakan semprotan berbasis tembaga dan tanam varietas yang tahan.
+Peach___healthy,Persik,Tidak Terdeteksi Penyakit,Pangkas dengan benar dan hindari penyiraman di atas daun.
+"Pepper,_bell___Bacterial_spot",Paprika,Bacterial Spot,Gunakan benih bebas penyakit dan aplikasikan bakterisida berbasis tembaga.
+"Pepper,_bell___healthy",Paprika,Tidak Terdeteksi Penyakit,Jaga drainase yang baik dan pantau hama secara rutin.
+Potato___Early_blight,Kentang,Early Blight,Gunakan fungisida seperti klorotalonil dan rotasi tanaman untuk mengurangi spora.
+Potato___healthy,Kentang,Tidak Terdeteksi Penyakit,Gunakan benih kentang bersertifikat dan pantau hama secara teratur.
+Potato___Late_blight,Kentang,Late Blight,Singkirkan tanaman yang terinfeksi segera dan aplikasikan fungisida seperti metalaksil.
+Raspberry___healthy,Raspberry,Tidak Terdeteksi Penyakit,Pangkas batang setelah panen dan hindari kepadatan tanaman.
+Soybean___healthy,Kedelai,Tidak Terdeteksi Penyakit,Rotasi tanaman dan gunakan pemupukan yang seimbang.
+Squash___Powdery_mildew,Labu,Powdery Mildew,Gunakan semprotan sulfur dan beri jarak tanaman untuk meningkatkan sirkulasi udara.
+Strawberry___healthy,Strawberry,Tidak Terdeteksi Penyakit,Gunakan mulsa untuk menjaga kelembaban tanah dan mencegah tumbuhnya gulma.
+Strawberry___Leaf_scorch,Strawberry,Leaf Scorch,Hapus daun yang terinfeksi dan gunakan fungisida jika penyakit berlanjut.
+Tomato___Bacterial_spot,Tomat,Bacterial Spot,Gunakan bakterisida berbasis tembaga dan tanam varietas tahan penyakit.
+Tomato___Early_blight ,Tomat,Early Blight,Gunakan fungisida seperti mankozeb dan singkirkan sisa tanaman yang terinfeksi.
+Tomato___healthy,Tomat,Tidak Terdeteksi Penyakit,Sirami di bagian pangkal dan hindari membasahi daun untuk mengurangi infeksi jamur.
+Tomato___Late_blight,Tomat,Late Blight,Singkirkan tanaman yang terinfeksi dan gunakan fungisida seperti klorotalonil atau tembaga.
+Tomato___Leaf_Mold,Tomat,Leaf Mold,Tingkatkan ventilasi di rumah kaca dan gunakan fungisida jika diperlukan.
+Tomato___Septoria_leaf_spot,Tomat,Septoria Leaf Spot,Hapus daun yang terinfeksi dan aplikasikan fungisida seperti klorotalonil.
+Tomato___Spider_mites Two-spotted_spider_mite,Tomat,Spider Mites Two-Spotted Spider Mite,Gunakan mitisida atau sabun insektisida untuk mengendalikan populasi tungau.
+Tomato___Target_Spot,Tomat,Target Spot,Singkirkan daun yang terinfeksi dan aplikasikan fungisida sejak dini.
+Tomato___Tomato_mosaic_virus ,Tomat,Mosaic Virus,Singkirkan tanaman yang terinfeksi dan terapkan sanitasi ketat pada alat dan benih.
+Tomato___Tomato_Yellow_Leaf_Curl_Virus,Tomat,Tomato Yellow Leaf Curl Virus,Gunakan varietas tahan dan kendalikan populasi kutu kebul sebagai vektor.
