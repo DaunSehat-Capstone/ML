@@ -24,15 +24,18 @@ def predict_image(image_path, class_names):
 
 def print_result(predicted_class, confidence):
     result = {}
-    with open('assets/data/plant.csv', mode ='r')as file:
-        csvFile = csv.reader(file)
-        for lines in csvFile:
-            if predicted_class in lines:
-                result['plant'] = lines[1]
-                result['condition'] = lines[2]
-                result['treatment'] = lines[3]
-                result['confidence'] = str(confidence)
-                break
+    if confidence < 0.9:
+        result['plant'] = 'Tanaman tidak diketahui'
+    else:
+        with open('assets/data/plant.csv', mode ='r')as file:
+            csvFile = csv.reader(file)
+            for lines in csvFile:
+                if predicted_class in lines:
+                    result['plant'] = lines[1]
+                    result['condition'] = lines[2]
+                    result['treatment'] = lines[3]
+                    result['confidence'] = str(confidence)
+                    break
     return result
 
 class_names = [
@@ -76,6 +79,7 @@ class_names = [
     "Tomato___Tomato_Yellow_Leaf_Curl_Virus"
 ]
 
+# img_path = "assets/img/padi.jpeg"
 img_path = "assets/img/corn_common_rust.jpg"
 # img_path = "assets/img/strawberry_lead_scorch.jpg"
 predicted_class, confidence = predict_image(img_path, class_names)
